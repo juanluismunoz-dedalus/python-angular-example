@@ -1,0 +1,43 @@
+{
+    "name": "Angular and Python",
+    // Base image with Node.js & TypeScript. Often includes a 'node' user.
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+
+    "features": {
+        // Add Python (default version, or specify one)
+        "ghcr.io/devcontainers/features/python:1": {},
+        // Add Angular CLI using a dedicated feature
+        "ghcr.io/devcontainers-extra/features/angular-cli:2": {}
+    },
+
+    // Forward necessary ports
+    "forwardPorts": [
+        4200, // Angular dev server
+        5000  // Python backend (example)
+    ],
+    "portsAttributes": {
+        "4200": { "label": "Angular Frontend" },
+        "5000": { "label": "Python Backend" }
+    },
+
+    // Essential VS Code extensions
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "angular.ng-template",
+                "esbenp.prettier-vscode"
+            ]
+            // "settings": { ... } // Optional: Add any specific settings
+        }
+    },
+
+    // Install project-specific dependencies
+    // (Global Angular CLI is handled by its feature)
+    // "postCreateCommand": "pip3 install -r requirements.txt && npm install"
+
+    // remoteUser and workspaceFolder are often not needed if defaults are fine:
+    // - remoteUser: Defaults to user in base image (e.g., 'node') or set by a feature.
+    // - workspaceFolder: Defaults to /workspaces/${localWorkspaceFolderBasename}
+    //   and your local project is auto-mounted there.
+}

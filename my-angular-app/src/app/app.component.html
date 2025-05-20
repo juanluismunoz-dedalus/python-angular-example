@@ -1,0 +1,12 @@
+<div style="text-align: center; margin-top: 50px">
+  <h1>{{ title }}</h1>
+  <div *ngIf="message">
+    <h2>Message from backend:</h2>
+    <p>{{ message }}</p>
+  </div>
+  <div *ngIf="!message">
+    <p>Loading message from backend...</p>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
