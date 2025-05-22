@@ -13,7 +13,7 @@
     // Forward necessary ports
     "forwardPorts": [
         4200, // Angular dev server
-        5000  // Python backend (example)
+        8000  // Python backend 
     ],
     "portsAttributes": {
         "4200": { "label": "Angular Frontend" },

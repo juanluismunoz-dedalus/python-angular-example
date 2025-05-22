@@ -20,7 +20,7 @@ This project consists of an Angular frontend and a FastAPI backend.
 2. Create and activate a virtual environment:
 
    ```
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
